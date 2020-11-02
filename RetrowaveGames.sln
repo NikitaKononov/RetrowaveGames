@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetrowaveGames", "RetrowaveGames\RetrowaveGames.csproj", "{4577EE38-0DB4-4C2F-AB27-3A822552B74B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4577EE38-0DB4-4C2F-AB27-3A822552B74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4577EE38-0DB4-4C2F-AB27-3A822552B74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4577EE38-0DB4-4C2F-AB27-3A822552B74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4577EE38-0DB4-4C2F-AB27-3A822552B74B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA08CA02-9596-47DF-8F09-60ABD728D3B1}
+	EndGlobalSection
+EndGlobal
