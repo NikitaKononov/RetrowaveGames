@@ -13,5 +13,9 @@ namespace RetrowaveGames {
         public SnakeForm() {
             InitializeComponent();
         }
+
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e) {
+            SnakeGameLogics.ResetGame();
+        }
     }
 }
