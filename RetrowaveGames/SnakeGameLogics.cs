@@ -60,7 +60,7 @@ namespace RetrowaveGames {
                     Snake[0].setY(Snake[0].getY() + 1);
                     break;
                 case "LEFT":
-                    Snake[0].setX(Snake[0].getX() + 1);
+                    Snake[0].setX(Snake[0].getX() - 1);
                     break;
             }
 
@@ -147,6 +147,36 @@ namespace RetrowaveGames {
         public static int GetScore()
         {
             return Score;
+        }
+
+        public static int getFieldWidth()
+        {
+            return FieldWidth;
+        }
+
+        public static int getFieldHeight()
+        {
+            return FieldHeight;
+        }
+
+        public static bool CheckPointBelongsToSnake(int xx, int yy)
+        {
+            for (int i = 0; i < SnakeLength; i++)
+            {
+                if (Snake[i].getX() == xx && Snake[i].getY() == yy)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static int[] GetFruit()
+        {
+            int[] coords = new int[2];
+            coords[0] = Fruit.getX();
+            coords[1] = Fruit.getY();
+            return coords;
         }
     }
 }
