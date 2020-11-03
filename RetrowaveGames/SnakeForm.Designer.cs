@@ -59,12 +59,14 @@
             this.rulesToolStripMenuItem.Name = "rulesToolStripMenuItem";
             this.rulesToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.rulesToolStripMenuItem.Text = "Rules";
+            this.rulesToolStripMenuItem.Click += new System.EventHandler(this.rulesToolStripMenuItem_Click);
             // 
             // exitToMainMenuToolStripMenuItem
             // 
             this.exitToMainMenuToolStripMenuItem.Name = "exitToMainMenuToolStripMenuItem";
             this.exitToMainMenuToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.exitToMainMenuToolStripMenuItem.Text = "Exit to main menu";
+            this.exitToMainMenuToolStripMenuItem.Click += new System.EventHandler(this.exitToMainMenuToolStripMenuItem_Click);
             // 
             // gameField
             // 
@@ -103,6 +105,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SnakeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snake";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SnakeForm_KeyDown);
             this.menuStrip1.ResumeLayout(false);

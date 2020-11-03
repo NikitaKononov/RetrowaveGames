@@ -76,5 +76,16 @@ namespace RetrowaveGames {
             g.FillRectangle(fruitBrush, 20 * mas[0], 20 * mas[1], 20, 20);
 
         }
+
+        private void rulesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("SNAKE THE GAME\nCollect fruits!\nControl snake with arrows.");
+        }
+
+        private void exitToMainMenuToolStripMenuItem_Click(object sender, EventArgs e) {
+            Close();
+            Form prevForm = Application.OpenForms[0];
+            prevForm.Show();
+        }
     }
 }
