@@ -1,6 +1,5 @@
-﻿
+﻿using System;
 
-using System.Xml.Schema;
 
 namespace RetrowaveGames {
     struct SnakeBlock
@@ -38,7 +37,8 @@ namespace RetrowaveGames {
         private static int MaxLength = 600, FieldWidth = 30, FieldHeight = 20;
 
         private static SnakeBlock[] Snake = new SnakeBlock[MaxLength];
-        private static int SnakeLength;
+        private static SnakeBlock Fruit = new SnakeBlock();
+        private static int SnakeLength, Score;
         private static string Direction;
 
         public static void MoveSnake()
@@ -64,7 +64,24 @@ namespace RetrowaveGames {
                     break;
             }
 
+            if (CheckFruit())
+            {
+                Score++;
+                SnakeLength++;
+                GenerateFruit();
+            }
+        }
 
+        private static void GenerateFruit()
+        {
+            Random rnd = new Random();
+            Fruit.setX(rnd.Next(0, FieldWidth));
+            Fruit.setY(rnd.Next(0, FieldHeight));
+        }
+
+        private static bool CheckFruit()
+        {
+            return Snake[0].getX() == Fruit.getX() && Snake[0].getY() == Fruit.getY();
         }
 
         public static void ChangeDirection(string newDir)
@@ -95,12 +112,12 @@ namespace RetrowaveGames {
             return CheckBorders() || CheckSelfCross();
         }
 
-        public static bool CheckBorders()
+        private static bool CheckBorders()
         {
             return Snake[0].getX() >= FieldWidth || Snake[0].getX() < 0 || Snake[0].getY() >= FieldHeight || Snake[0].getY() < 0;
         }
 
-        public static bool CheckSelfCross()
+        private static bool CheckSelfCross()
         {
             for (int i = 1; i < SnakeLength; i++) 
             {
@@ -115,6 +132,7 @@ namespace RetrowaveGames {
         public static void ResetGame()
         {
             SnakeLength = 4;
+            Score = 0;
             Direction = "RIGHT";
 
             for (int i = 0; i < MaxLength; i++)
@@ -122,6 +140,13 @@ namespace RetrowaveGames {
                 Snake[i].setX(0);
                 Snake[i].setY(0);
             }
+
+            GenerateFruit();
+        }
+
+        public static int GetScore()
+        {
+            return Score;
         }
     }
 }
