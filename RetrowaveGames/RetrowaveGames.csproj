@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArcanoidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArcanoidForm.Designer.cs">
+      <DependentUpon>ArcanoidForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
