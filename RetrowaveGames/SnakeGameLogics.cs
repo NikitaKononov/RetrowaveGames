@@ -70,6 +70,7 @@ namespace RetrowaveGames {
                 SnakeLength++;
                 GenerateFruit();
             }
+            return;
         }
 
         private static void GenerateFruit()
