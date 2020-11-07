@@ -13,5 +13,9 @@ namespace RetrowaveGames {
         public TetrisForm() {
             InitializeComponent();
         }
+
+        private void TetrisForm_Load(object sender, EventArgs e) {
+           
+        }
     }
 }
