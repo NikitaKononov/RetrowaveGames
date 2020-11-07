@@ -105,6 +105,8 @@ namespace RetrowaveGames {
                         Direction = newDir;
                     break;
             }
+
+            return;
         }
 
         public static bool CheckEndGame()
