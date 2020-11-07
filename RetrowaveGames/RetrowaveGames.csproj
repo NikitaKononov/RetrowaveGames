@@ -72,6 +72,7 @@
     <Compile Include="SnakeForm.Designer.cs">
       <DependentUpon>SnakeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SnakeGameLogics.cs" />
     <Compile Include="TetrisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +87,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SnakeForm.resx">
+      <DependentUpon>SnakeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
