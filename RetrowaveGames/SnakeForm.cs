@@ -80,12 +80,14 @@ namespace RetrowaveGames {
         private void rulesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("SNAKE THE GAME\nCollect fruits!\nControl snake with arrows.");
+            return;
         }
 
         private void exitToMainMenuToolStripMenuItem_Click(object sender, EventArgs e) {
             Close();
             Form prevForm = Application.OpenForms[0];
             prevForm.Show();
+            return;
         }
     }
 }

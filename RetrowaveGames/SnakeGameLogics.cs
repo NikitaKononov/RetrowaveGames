@@ -70,6 +70,7 @@ namespace RetrowaveGames {
                 SnakeLength++;
                 GenerateFruit();
             }
+            return;
         }
 
         private static void GenerateFruit()
@@ -105,6 +106,8 @@ namespace RetrowaveGames {
                         Direction = newDir;
                     break;
             }
+
+            return;
         }
 
         public static bool CheckEndGame()
