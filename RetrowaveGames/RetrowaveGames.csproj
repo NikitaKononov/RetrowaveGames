@@ -60,6 +60,7 @@
     <Compile Include="RaceForm.Designer.cs">
       <DependentUpon>RaceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RaceGameLogics.cs" />
     <Compile Include="SnakeForm.cs">
       <SubType>Form</SubType>
     </Compile>
